@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+
+<body>
+  <main class="wrapper">
+    <!-- tarjeta delantera inicio -->
+    <div class="card">
+      <div class="card-front">
+        <img src="./images/bg-card-front.png" alt="frente de la tarjeta">
+        <div class="card-front__data">
+          <img src="./images/card-logo.svg" alt="">
+          <div>
+            <p class="card-number" id="card-number" >0000 0000 0000 0000</p>
+            <div class="card-name-date">
+              <p class="card-name" id="card-name">Jane Appleseed</p>
+              <p class="card-date" id="card-date"><span id="card-month">00</span>/<span id="card-year">00</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tarjeta delantera fin -->
+
+      <!--  tarjeta dorso incio  -->
+      <div class="card-back">
+        <img src="./images/bg-card-back.png" alt="dorso de la tarjeta">
+        <div class="card-back__data">
+          <p class="card-cvc" id="card-cvc">000</p>
+        </div>
+      </div>
+    </div>
+    <!-- tarjeta dorso fin -->
+
+    <!-- incio formulario -->
+
+    <div class="form-wrapper">
+      <form class="form" id="form">
+        <div class="form-group">
+          <label for="input-name" class="label" id="">Cardholder Name</label>
+          <input type="text" class="input" id="input-name" placeholder="e.g. Jane Appleseed" required>
+        </div class="">
+        <div class="form-group">
+          <label for="input-number" class="label">Card Number</label>
+          <input type="number" class="input" id="input-number" placeholder=" e.g. 1234 5678 9123 0000"  required>
+        </div>
+        <div class="form-group-double">
+          <div class="rows">
+            <label for="input-exp" class="label">Exp. Date (MM/YY)</label>
+          </div>
+          <div class="columns">
+            <input type="text" class="input" id="input-month" placeholder="MM" maxlength="2" required>
+            <input type="text" class="input" id="input-year" placeholder="YY" maxlength="2" required>
+          </div>
+        </div>
+
+        <div class="rows">
+          <label for="input-cvc" class="label">CVC</label>
+          <input type="text" class="input" id="input-cvc" maxlength="3" placeholder=" e.g. 123">
+        </div>
+        <div class="form-group">
+          <button class="button" type="submit">Confirm</button>
+        </div>
+      </form>
+    </div>
+    <!--  Fin del Formulario -->
+
+    <!-- incio thank you -->
+    <div class="thank-you disabled" id="thank-you">
+      <img src="./images/icon-complete.svg" alt="icono de completado">
+      <p class="thank-you.title">Thank you</p>
+      <p class="thank-you-text">We've added your card details</p>
+      <button class="button" id="continue">Continue</button>
+    </div>
+  </main>
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js"
+  integrity="sha512-SvgzybymTn9KvnNGu0HxXiGoNeOi0TTK7viiG0EGn2Qbeu/NFi3JdWrJs2JHiGA1Lph+dxiDv5F9gDlcgBzjfA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
